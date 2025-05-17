@@ -1,7 +1,7 @@
 local cooldown = {}
 
-lib.addCommand('motor', {
-    help = 'Spawn een motor.',
+vx.addCommand('motor', {
+    help = 'Spawn a motor.',
     restricted = false,
 }, function(source, args)
     local src = source
@@ -10,7 +10,8 @@ lib.addCommand('motor', {
     if cooldown[src] and os - cooldown[src] < 300 then
         local remaining = 300 - (os - cooldown[src])
         TriggerClientEvent("ox_lib:notify", src, {
-            description = "Je moet nog " .. remaining .. " seconden wachten voordat je weer een motor kan spawnen",
+            description = "You have to wait " .. remaining .. " seconds before you can spawn a motor again.",
+            position = "left-center",
             type = "error"
         })
         return

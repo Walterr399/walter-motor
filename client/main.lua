@@ -1,16 +1,10 @@
-RegisterNetEvent("grp-motor:client:spawn", function()
+RegisterNetEvent("grp-marriage:client:spawn", function()
     local playerPed = PlayerPedId()
     local coords = GetEntityCoords(playerPed)
     local heading = GetEntityHeading(playerPed)
-    local model = GetHashKey("bati")
+    local model = GetHashKey("bati") --# Bati by default.
 
-    RequestModel(model)
-    while not HasModelLoaded(model) do
-        Wait(10)
-    end
-
-    local vehicle = CreateVehicle(model, coords.x, coords.y, coords.z, heading, true, false)
+    local vehicle = vx.createVehicle(model, coords, heading, true, false, true)
 
     TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
-    SetModelAsNoLongerNeeded(model)
 end)
