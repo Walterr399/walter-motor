@@ -10,9 +10,7 @@ client_scripts { "client/*.lua" }
 server_scripts { "server/*.lua" }
 shared_scripts { "@vx_lib/init.lua" }
 
---# Depencies
-
-depencies {
+dependencies {
+    "ox_lib",
     "vx_lib",
-    "ox_lib"
 }

@@ -18,5 +18,5 @@ vx.addCommand('motor', {
     end
 
     cooldown[src] = os
-    TriggerClientEvent('grp-motor:client:spawn', src)
+    TriggerClientEvent('walter-motor:client:spawn', src)
 end)

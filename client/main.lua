@@ -1,4 +1,4 @@
-RegisterNetEvent("grp-motor:client:spawn", function()
+RegisterNetEvent("walter-motor:client:spawn", function()
     local playerPed = PlayerPedId()
     local coords = GetEntityCoords(playerPed)
     local heading = GetEntityHeading(playerPed)
