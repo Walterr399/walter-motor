@@ -7,7 +7,7 @@ description "A simple resource mostly used by easy weapons servers."
 version "1.0.0"
 
 client_scripts { "client/*.lua" }
-server_scripts { "server/*.lua" }
+server_scripts { "server/*.lua", "config.lua" }
 shared_scripts { "@vx_lib/init.lua" }
 
 dependencies {

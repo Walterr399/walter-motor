@@ -1,3 +1,5 @@
+local Config = require("config")
+
 local cooldown = {}
 
 vx.addCommand('motor', {
@@ -19,4 +21,8 @@ vx.addCommand('motor', {
 
     cooldown[src] = os
     TriggerClientEvent('walter-motor:client:spawn', src)
+end)
+
+vx.callback.register("walter-motor:server:receive:config", function()
+    return Config
 end)
