@@ -4,13 +4,12 @@ A simple and clean resource for spawning a motorbike using the `vx_lib` framewor
 
 ## Features
 
-- 5-minute cooldown per player
+- 5 minute cooldown per player
 - Framework support via `vx_lib`
 
-## Requirements
+## Requirement
 
 - [vx_lib](https://github.com/Vertex-Scripts/vx_lib)
-- [ox_lib](https://github.com/overextended/ox_lib)
 
 ## Installation
 
@@ -18,5 +17,4 @@ A simple and clean resource for spawning a motorbike using the `vx_lib` framewor
 2. Add the following to your `server.cfg`:
    ```cfg
    ensure vx_lib
-   ensure ox_lib
    ensure walter-motor
